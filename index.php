@@ -83,6 +83,49 @@
 	for($x = 0; $x <= 10; $x++){
 		echo "O numero é $x <br>";
 	}
+
+	echo "<br>";
+
+	$cores = array("vermelho", "azul", "amarelo");
+	foreach($cores as $valor){
+		echo"$valor <br>";
+	}
+
+	echo "<br>";
+
+	function escreverMsg(){
+		echo "Olá mundo!";
+	}
+	escreverMsg();
+	
+	echo "<br>";
+
+	function familiaNome($nome){
+		echo "$nome Silva <br>";
+	}
+
+	familiaNome("Joana");
+	familiaNome("Gonçalo");
+
+	echo "<br>";
+
+	function familiaAno($nome, $ano){
+		echo "$nome Silva, nasceu em $ano <br>";
+	}
+
+	familiaAno("Gonçalo", "2006");
+
+	function altura($altura = 170){
+		echo "A altura é: $altura";
+	}
+
+	echo "<br>";
+
+	altura(180);
+	
+	echo "<br>";
+
+	altura();
 ?>
 </body>
 </html>
