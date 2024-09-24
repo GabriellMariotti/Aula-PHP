@@ -126,6 +126,139 @@
 	echo "<br>";
 
 	altura();
+	
+	echo "Está", "string", "foi", "feita", "com", "multiplos", "parametros<br>";
+	echo "<br>";
+	$txt1 = "Estudo PHP";
+	$txt2 = "EPB";
+	$x = 5;
+	$y = 4;
+	echo "<h2>". $txt1."</h2>";
+	echo "Estudo PHP na". $txt2 ."<br>";
+	echo $x + $y . "<br>";
+
+	$frutinhas = array("Maçã", "Manga", "Açai");
+
+	$lenghFrutinhas = count($frutinhas);
+	for($x = 0; $x < $lenghFrutinhas; $x++){
+		echo $frutinhas[$x];
+		echo "<br>";
+	}
+	
+	$idades =  array("Pedro"=>"19","Gabriel"=>"18", "Paulo"=>"24");
+	echo "O Gabriel do desce e quebra tem ". $idades["Gabriel"] ."anos de idade";
+	echo "<br>";
+
+	foreach($idades as $x => $x_value){
+		echo "Chave= ". $x ." Valor= ". $x_value;
+		echo "<br>";
+	}
+
+	$numeros = array(1, 6, 3);
+	sort($numeros);
+	$lenghNumeros = count($numeros);
+
+	for($x = 0; $x < $lenghNumeros; $x++){
+		echo $numeros[$x]. ",";
+		echo "<br>";
+	}
+
+	rsort($numeros);
+	for($x = 0; $x < $lenghNumeros; $x++){
+		echo $numeros[$x]. ",";
+		echo "<br>";
+	}
+
+	$nome = array("Gabriel", "Maria", "Sofia");
+	sort($nome);
+	$lenghNumeros = count($nome);
+
+	for($x = 0; $x < $lenghNumeros; $x++){
+		echo $nome[$x]. ",";
+		echo "<br>";
+	}
+	
+	echo "<br>";
+
+	$nome = array("Gabriel", "Maria", "Sofia");
+	rsort($nome);
+	$lenghNumeros = count($nome);
+
+	for($x = 0; $x < $lenghNumeros; $x++){
+		echo $nome[$x]. ",";
+		echo "<br>";
+	}
+
+	echo "<br>";
+	
+	$idades =  array("Pedro"=>"19","Gabriel"=>"18", "Paulo"=>"24");
+	asort($idades);
+	foreach($idades as $x => $x_value){
+		echo "Chave= ". $x ." Valor= ". $x_value;
+		echo "<br>";
+	}
+
+	echo "<br>";
+	$idades =  array("Pedro"=>"19","Gabriel"=>"18", "Paulo"=>"24");
+	ksort($idades);
+	foreach($idades as $x => $x_value){
+		echo "Chave= ". $x ." Valor= ". $x_value;
+		echo "<br>";
+	}
+
+	echo "<br>";
+	$idades =  array("Pedro"=>"19","Gabriel"=>"18", "Paulo"=>"24");
+	arsort($idades);
+	foreach($idades as $x => $x_value){
+		echo "Chave= ". $x ." Valor= ". $x_value;
+		echo "<br>";
+	}
+
+	echo "<br>";
+	$idades =  array("Pedro"=>"19","Gabriel"=>"18", "Paulo"=>"24");
+	krsort($idades);
+	foreach($idades as $x => $x_value){
+		echo "Chave= ". $x ." Valor= ". $x_value;
+		echo "<br>";
+	}
+
+	$x = 7;
+	$y = 3;
+
+	function adicao(){
+		$GLOBALS["z"] = $GLOBALS["x"] + $GLOBALS["y"];
+	}
+	adicao();
+	echo $z;
+	echo "<br>";
+
+	function adicao1($a, $b){
+		echo $a + $b;
+
+	}
+
+	adicao1(75, 25);
+	echo "<br>";
+	
+	echo $_SERVER['PHP_SELF'];
+	echo "<br>";
+	echo "PHP_SELF<br>";
+	echo $_SERVER['SERVER_NAME'];
+	echo "<br>";
+	echo "SERVER NAME<br>";
+	echo $_SERVER['HTTP_HOST'];
+	echo "<br>";
+	echo "HTTP_HOST<br>";
+	echo $_SERVER['HTTP_REFERER'];
+	echo "<br>";
+	echo "HTTP_REFERER<br>";
+	echo $_SERVER['HTTP_USER_AGENT'];
+	echo "<br>";
+	echo "HTTP_USER_AGENT<br>";
+	echo $_SERVER['SCRIPT_NAME'];
+	echo "<br>";
+	echo "SCRIPT_NAME'<br>";
+
 ?>
 </body>
 </html>
