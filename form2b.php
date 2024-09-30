@@ -9,7 +9,7 @@
     <?php
     # Define variáveis com valores vazios
     $nomeErr = $emailErr = $generoErr = "";
-    $nome = $email = $genero = $comment = $website = "";
+    $nome = $email = $genero = $coment = $website = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["nome"])) {
             $nomeErr = "Preencha o nome."; }
@@ -23,10 +23,10 @@
             $website = ""; }
         else {
             $website = teste_input($_POST["website"]); }
-        if (empty($_POST["comment"])) {
-            $comment = ""; }
+        if (empty($_POST["coment"])) {
+            $coment = ""; }
         else {
-            $comment = teste_input($_POST["comment"]); }
+            $coment = teste_input($_POST["coment"]); }
         if (empty($_POST["genero"])) {
             $generoErr = "Preencha o género."; }
         else {
@@ -61,9 +61,9 @@
     <form action="teste1.php" method="post">
         <input type="hidden" name="nome" value="<?php echo $nome;?>">
         <input type="hidden" name="email" value="<?php echo $email;?>">
-        <input type="hidden" name="email" value="<?php echo $website;?>">
-        <input type="hidden" name="email" value="<?php echo $comment;?>">
-        <input type="hidden" name="email" value="<?php echo $genero;?>">
+        <input type="hidden" name="website" value="<?php echo $website;?>">
+        <input type="hidden" name="coment" value="<?php echo $coment;?>">
+        <input type="hidden" name="genero" value="<?php echo $genero;?>">
         <?php
             echo "<h2>Os seus dados:</h2>";
             echo $nome;
@@ -72,7 +72,7 @@
             echo "<br>";
             echo $website;
             echo "<br>";
-            echo $comment;
+            echo $coment;
             echo "<br>";
             echo $genero;
             echo "<br>";
